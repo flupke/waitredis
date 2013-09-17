@@ -4,6 +4,10 @@ waitredis
 This is a simple wrapper script that starts a command once redis has finished
 loading its dataset in memory.
 
+Installation::
+
+    $ pip install waitredis
+
 Sample usage::
 
     $ sudo restart redis-server && waitredis redis-cli time
