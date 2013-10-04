@@ -27,7 +27,7 @@ def main():
     while (options.timeout is None or 
             time.time() - start_time < options.timeout):
         try:
-            client.time()
+            client.dbsize()
         except redis.ResponseError as exc:
             if exc.args[0].startswith('LOADING'):
                 time.sleep(0.1)
